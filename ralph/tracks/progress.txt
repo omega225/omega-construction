@@ -54,3 +54,22 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - No build tooling — "typecheck passes" means well-formed HTML; browser inspection is the only verification
   - Browser testing not available in this environment — manual verification needed
 ---
+
+## 2026-04-16 - US-003
+- What was implemented: Home page — Hero & Trust Bar sections
+  - Replaced `<main class="pt-16">` stub with full hero + trust bar markup
+  - Hero: min-h-screen, placehold.co 1920x1080 bg image (navy/amber palette), .hero-overlay div for 60% opacity overlay
+  - Hero headline: font-serif text-5xl md:text-7xl white bold
+  - Sub-headline: white/80 opacity Inter
+  - Two CTA buttons: 'View Our Work' → ./projects.html (amber fill), 'Get a Free Quote' → ./contact.html (white border)
+  - Animated scroll-down chevron (animate-bounce) linking to #trust-bar
+  - Trust bar: bg-cream, grid-cols-2 md:grid-cols-4, amber stats + slate labels
+  - Stats 3 & 4 use SVG icons inline (no numeric glyph available for those)
+- Files changed: index.html
+- **Learnings for future iterations:**
+  - `<main>` should NOT have `pt-16` padding — hero is min-h-screen and handles its own top padding (pt-32) to clear the fixed nav
+  - Hero uses `relative` parent + `absolute inset-0` for both the bg image and .hero-overlay, with content in a `relative z-10` div
+  - Trust bar grid: `grid-cols-2 md:grid-cols-4` gives 2x2 on mobile/tablet and 4-col on desktop
+  - Scroll chevron: `animate-bounce` is a built-in Tailwind utility (no custom CSS needed)
+  - placehold.co URLs: `https://placehold.co/{W}x{H}/{bg-hex}/{text-hex}?text=...` (omit # from hex)
+---
