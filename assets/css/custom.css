@@ -24,3 +24,16 @@ html {
 [class*="transition-none"] {
   transition: none !important;
 }
+
+/* Project filter button states */
+.filter-active {
+  background-color: #C8963E;
+  color: #ffffff;
+  border-color: #C8963E;
+}
+
+.filter-inactive {
+  background-color: transparent;
+  color: #C8963E;
+  border-color: #C8963E;
+}

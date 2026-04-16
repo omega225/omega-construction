@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Omega Construction</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN with brand config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  '#1A2E4A',
+            amber: '#C8963E',
+            cream: '#F7F4EF',
+            slate: '#64748B',
+          },
+          fontFamily: {
+            serif:  ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:   ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/custom.css" />
+</head>
+<body class="font-sans text-navy bg-white">
+
+  <!-- ═══════════════════════════════════════════════════════════ NAV ══ -->
+  <nav
+    id="main-nav"
+    class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-navy"
+  >
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="./index.html" class="flex items-center gap-2 text-white font-serif font-bold text-xl tracking-wide">
+          <span class="text-amber text-2xl leading-none">Ω</span>
+          <span>OMEGA CONSTRUCTION</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="./index.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Home</a>
+          <a href="./about.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">About</a>
+          <a href="./services.html" class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Services</a>
+          <a href="./projects.html" class="text-amber border-b-2 border-amber pb-0.5 font-medium text-sm uppercase tracking-wider">Projects</a>
+          <a href="./contact.html"  class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Contact</a>
+          <a
+            href="./contact.html"
+            class="ml-2 bg-amber hover:bg-amber/90 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2.5 rounded transition-colors"
+          >Get a Quote</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button
+          id="nav-toggle"
+          class="md:hidden text-white p-2 focus:outline-none"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="nav-mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+        <a href="./index.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium py-2">Home</a>
+        <a href="./about.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium py-2">About</a>
+        <a href="./services.html" class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium py-2">Services</a>
+        <a href="./projects.html" class="text-amber font-medium text-sm uppercase tracking-wider py-2">Projects</a>
+        <a href="./contact.html"  class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium py-2">Contact</a>
+        <a
+          href="./contact.html"
+          class="bg-amber hover:bg-amber/90 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2.5 rounded transition-colors text-center mt-2"
+        >Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+  <!-- ══════════════════════════════════════════════════ END NAV ══════ -->
+
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════ PAGE HERO ════════ -->
+    <section
+      class="relative flex items-center"
+      style="min-height: 50vh;"
+    >
+      <!-- Background image -->
+      <img
+        src="https://placehold.co/1920x1080/1A2E4A/C8963E?text=Our+Work"
+        alt="Omega Construction projects"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- Navy overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 w-full">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-white/60 text-sm">
+            <li><a href="./index.html" class="hover:text-amber transition-colors">Home</a></li>
+            <li>
+              <svg class="w-4 h-4 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </li>
+            <li class="text-white">Projects</li>
+          </ol>
+        </nav>
+        <h1 class="font-serif text-5xl md:text-6xl font-bold text-white leading-tight mb-4">Our Work</h1>
+        <p class="text-white/80 text-lg max-w-2xl leading-relaxed">
+          From custom homes to commercial build-outs across Northern Virginia — browse our portfolio and see what we can build for you.
+        </p>
+      </div>
+    </section>
+    <!-- ═══════════════════════════════════════════ END PAGE HERO ══════ -->
+
+
+    <!-- ══════════════════════════════════════════ PROJECT GRID ═════════ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Filter Bar -->
+        <div class="flex items-center justify-center gap-3 mb-14 flex-wrap">
+          <button
+            data-filter="all"
+            class="filter-active border-2 font-semibold text-sm uppercase tracking-wider px-6 py-2.5 rounded transition-colors"
+          >All</button>
+          <button
+            data-filter="residential"
+            class="filter-inactive border-2 font-semibold text-sm uppercase tracking-wider px-6 py-2.5 rounded transition-colors"
+          >Residential</button>
+          <button
+            data-filter="commercial"
+            class="filter-inactive border-2 font-semibold text-sm uppercase tracking-wider px-6 py-2.5 rounded transition-colors"
+          >Commercial</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Card 1 — Residential -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="residential"
+            data-name="Fairfax Custom Home"
+            data-location="Fairfax, VA"
+            data-scope="3,800 sq ft custom single-family residence with open-plan kitchen and luxury master suite."
+            data-year="2024"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/1A2E4A/C8963E?text=Fairfax+Custom+Home"
+                alt="Fairfax Custom Home"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <!-- Hover Overlay -->
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">3,800 sq ft custom single-family residence with open-plan kitchen and luxury master suite.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">Fairfax Custom Home</h3>
+              <span class="inline-block bg-cream text-navy text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Residential</span>
+            </div>
+          </div>
+
+          <!-- Card 2 — Residential -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="residential"
+            data-name="McLean Family Addition"
+            data-location="McLean, VA"
+            data-scope="1,200 sq ft two-story addition including a new family room, home office, and guest suite."
+            data-year="2023"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/C8963E/F7F4EF?text=McLean+Addition"
+                alt="McLean Family Addition"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">1,200 sq ft two-story addition including a new family room, home office, and guest suite.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">McLean Family Addition</h3>
+              <span class="inline-block bg-cream text-navy text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Residential</span>
+            </div>
+          </div>
+
+          <!-- Card 3 — Commercial -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="commercial"
+            data-name="Arlington Office Renovation"
+            data-location="Arlington, VA"
+            data-scope="Full interior renovation of 6,000 sq ft Class A office space including open-plan workstations and conference rooms."
+            data-year="2024"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/64748B/F7F4EF?text=Arlington+Office"
+                alt="Arlington Office Renovation"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">Full interior renovation of 6,000 sq ft Class A office space including open-plan workstations and conference rooms.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">Arlington Office Renovation</h3>
+              <span class="inline-block bg-navy text-cream text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Commercial</span>
+            </div>
+          </div>
+
+          <!-- Card 4 — Residential -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="residential"
+            data-name="Great Falls Estate"
+            data-location="Great Falls, VA"
+            data-scope="New construction of a 5,200 sq ft luxury estate on a wooded 2-acre lot with custom millwork throughout."
+            data-year="2023"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/1A2E4A/F7F4EF?text=Great+Falls+Estate"
+                alt="Great Falls Estate"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">New construction of a 5,200 sq ft luxury estate on a wooded 2-acre lot with custom millwork throughout.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">Great Falls Estate</h3>
+              <span class="inline-block bg-cream text-navy text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Residential</span>
+            </div>
+          </div>
+
+          <!-- Card 5 — Commercial -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="commercial"
+            data-name="Tysons Retail Build-Out"
+            data-location="Tysons Corner, VA"
+            data-scope="Ground-up retail shell build-out of 4,500 sq ft including storefront glazing, tenant fit-out, and MEP coordination."
+            data-year="2024"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/C8963E/1A2E4A?text=Tysons+Retail"
+                alt="Tysons Retail Build-Out"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">Ground-up retail shell build-out of 4,500 sq ft including storefront glazing, tenant fit-out, and MEP coordination.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">Tysons Retail Build-Out</h3>
+              <span class="inline-block bg-navy text-cream text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Commercial</span>
+            </div>
+          </div>
+
+          <!-- Card 6 — Residential -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="residential"
+            data-name="Vienna Farmhouse Renovation"
+            data-location="Vienna, VA"
+            data-scope="Whole-home renovation of a 1960s farmhouse including new kitchen, bathrooms, structural updates, and exterior refresh."
+            data-year="2022"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/F7F4EF/1A2E4A?text=Vienna+Farmhouse"
+                alt="Vienna Farmhouse Renovation"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">Whole-home renovation of a 1960s farmhouse including new kitchen, bathrooms, structural updates, and exterior refresh.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">Vienna Farmhouse Renovation</h3>
+              <span class="inline-block bg-cream text-navy text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Residential</span>
+            </div>
+          </div>
+
+          <!-- Card 7 — Commercial -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="commercial"
+            data-name="Herndon Medical Office"
+            data-location="Herndon, VA"
+            data-scope="Interior fit-out of a 3,200 sq ft medical office suite with ADA-compliant exam rooms, reception, and lab space."
+            data-year="2023"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/1A2E4A/C8963E?text=Herndon+Medical"
+                alt="Herndon Medical Office"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">Interior fit-out of a 3,200 sq ft medical office suite with ADA-compliant exam rooms, reception, and lab space.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">Herndon Medical Office</h3>
+              <span class="inline-block bg-navy text-cream text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Commercial</span>
+            </div>
+          </div>
+
+          <!-- Card 8 — Residential -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="residential"
+            data-name="Reston Townhouse Remodel"
+            data-location="Reston, VA"
+            data-scope="End-to-end remodel of a 2,400 sq ft townhouse including kitchen expansion, deck addition, and master bath upgrade."
+            data-year="2022"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/C8963E/F7F4EF?text=Reston+Townhouse"
+                alt="Reston Townhouse Remodel"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">End-to-end remodel of a 2,400 sq ft townhouse including kitchen expansion, deck addition, and master bath upgrade.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">Reston Townhouse Remodel</h3>
+              <span class="inline-block bg-cream text-navy text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Residential</span>
+            </div>
+          </div>
+
+          <!-- Card 9 — Commercial -->
+          <div
+            class="group rounded-lg overflow-hidden shadow-md"
+            data-type="commercial"
+            data-name="Falls Church Mixed-Use"
+            data-location="Falls Church, VA"
+            data-scope="New construction of a 12,000 sq ft mixed-use building with ground-floor retail and four upper-floor residential units."
+            data-year="2024"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://placehold.co/1200x800/64748B/C8963E?text=Falls+Church+Mixed-Use"
+                alt="Falls Church Mixed-Use"
+                class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <p class="text-white/90 text-sm leading-relaxed mb-4">New construction of a 12,000 sq ft mixed-use building with ground-floor retail and four upper-floor residential units.</p>
+                <button
+                  data-lightbox-trigger
+                  class="bg-amber hover:bg-amber/90 text-white text-xs font-semibold uppercase tracking-wider px-5 py-2 rounded transition-colors"
+                >View Details</button>
+              </div>
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="font-serif text-lg font-bold text-navy mb-1">Falls Church Mixed-Use</h3>
+              <span class="inline-block bg-navy text-cream text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Commercial</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- ─── End Project Cards Grid ─── -->
+
+      </div>
+    </section>
+    <!-- ════════════════════════════════════════════ END PROJECT GRID ══ -->
+
+
+    <!-- ═══════════════════════════════════════════════ CTA BANNER ══════ -->
+    <section class="bg-navy py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-amber mb-6 leading-tight">
+          Ready to Start Your Project?
+        </h2>
+        <p class="text-white/80 text-lg leading-relaxed mb-10">
+          Whether you're planning a custom home, a commercial build, or a full renovation, our team is ready to bring your vision to life. Reach out today for a no-obligation consultation.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="tel:+17035550192"
+            class="bg-amber hover:bg-amber/90 text-white font-semibold uppercase tracking-wider text-sm px-8 py-3.5 rounded transition-colors w-full sm:w-auto"
+          >Call (703) 555-0192</a>
+          <a
+            href="./contact.html"
+            class="border-2 border-white text-white hover:bg-white hover:text-navy font-semibold uppercase tracking-wider text-sm px-8 py-3.5 rounded transition-colors w-full sm:w-auto"
+          >Send Us a Message</a>
+        </div>
+      </div>
+    </section>
+    <!-- ═══════════════════════════════════════════ END CTA BANNER ══════ -->
+
+  </main>
+
+
+  <!-- ════════════════════════════════════════════════════ FOOTER ═════ -->
+  <footer class="bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+      <!-- 3-column grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Column 1 — Logo & Tagline -->
+        <div>
+          <a href="./index.html" class="flex items-center gap-2 font-serif font-bold text-xl tracking-wide mb-3">
+            <span class="text-amber text-2xl leading-none">Ω</span>
+            <span>OMEGA CONSTRUCTION</span>
+          </a>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Virginia's trusted general contractor for residential and commercial projects — built right, every time.
+          </p>
+        </div>
+
+        <!-- Column 2 — Quick Links -->
+        <div>
+          <h3 class="text-amber font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./index.html"    class="text-white/70 hover:text-amber transition-colors">Home</a></li>
+            <li><a href="./about.html"    class="text-white/70 hover:text-amber transition-colors">About Us</a></li>
+            <li><a href="./services.html" class="text-white/70 hover:text-amber transition-colors">Services</a></li>
+            <li><a href="./projects.html" class="text-white/70 hover:text-amber transition-colors">Projects</a></li>
+            <li><a href="./contact.html"  class="text-white/70 hover:text-amber transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 — Contact Details -->
+        <div>
+          <h3 class="text-amber font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</h3>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>
+              <a href="tel:+17035550192" class="hover:text-amber transition-colors">(703) 555-0192</a>
+            </li>
+            <li>
+              <a href="mailto:info@omegaconstruction.com" class="hover:text-amber transition-colors">info@omegaconstruction.com</a>
+            </li>
+            <li class="pt-1">Mon – Fri &nbsp;7 am – 5 pm</li>
+            <li>Serving Northern Virginia &amp; surrounding areas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-12 border-t border-white/10 pt-6 text-center text-white/40 text-xs">
+        &copy; 2025 Omega Construction LLC. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+  <!-- ══════════════════════════════════════════════════ END FOOTER ══ -->
+
+  <!-- Main JS -->
+  <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
