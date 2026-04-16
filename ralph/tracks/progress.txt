@@ -9,6 +9,10 @@
 - Nav id="main-nav", toggle btn id="nav-toggle", mobile menu id="nav-mobile-menu"
 - Contact form id="contact-form" with field ids: field-name, field-email, field-description
 - Lightbox div id="lightbox", image id="lb-image", etc.
+- Nav: fixed top, z-50, bg-navy always (not transparent — scroll effect adds shadow via JS)
+- Active nav link: text-amber + border-b-2 border-amber; inactive: text-white hover:text-amber
+- Footer: bg-navy, 3-col md:grid-cols-3, stacks to 1 col on mobile
+- No typecheck tooling — quality check is well-formed HTML structure
 ---
 
 # Ralph Progress Log
@@ -27,4 +31,26 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - Nav uses id="main-nav" (scroll switch), id="nav-toggle" (hamburger), id="nav-mobile-menu" (mobile dropdown)
   - Tailwind CDN config block and Google Fonts <link> will be repeated in every HTML file's <head> — define them consistently
   - The .hero-overlay class provides the navy 60% overlay; pair with relative positioning on the parent
+---
+
+## 2026-04-16 - US-002
+- What was implemented: Shared nav & footer HTML partials documented
+  - index.html created at repository root with full shared <head> block
+  - Tailwind CDN script with inline brand config (navy, amber, cream, slate + Playfair/Inter fonts)
+  - Google Fonts link (Playfair Display + Inter, display=swap)
+  - Fixed top nav: navy bg, Ω logo with amber glyph, desktop links + mobile hamburger, amber 'Get a Quote' CTA
+  - Active link (Home) styled with text-amber + border-b-2 border-amber
+  - Mobile menu (#nav-mobile-menu) toggled by main.js hamburger handler
+  - Nav scroll effect wired to #main-nav via existing initNavScroll() in main.js
+  - Footer: navy bg, 3-column grid (logo+tagline / quick links / contact details), responsive (stacks on mobile)
+  - Copyright line: © 2025 Omega Construction LLC. All rights reserved.
+  - All links use relative paths (./about.html etc.)
+  - Empty <main class="pt-16"> stub left for US-003 through US-005 home page content
+- Files changed: index.html (created)
+- **Learnings for future iterations:**
+  - Copy the full <head> block from index.html for every new page — it contains Tailwind config, Google Fonts, and custom.css
+  - For active nav link on other pages: swap text-amber + border-b-2 border-amber onto the matching link, revert Home to text-white hover:text-amber
+  - Nav is always bg-navy (not transparent). initNavScroll JS adds nav-scrolled/nav-transparent classes but those aren't defined in custom.css — transparent hero nav would need those added
+  - No build tooling — "typecheck passes" means well-formed HTML; browser inspection is the only verification
+  - Browser testing not available in this environment — manual verification needed
 ---
