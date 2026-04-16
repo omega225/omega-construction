@@ -105,3 +105,22 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - Two-column image+text: use `order-first` on image div so it appears on top when grid collapses to 1 col on mobile
   - Browser testing not available — manual verification needed
 ---
+
+## 2026-04-16 - US-006
+- What was implemented: About page — full build
+  - about.html created at repository root with full shared head, nav (active link = About), and footer
+  - Page hero: 50vh (min-height via inline style), placehold.co bg image, breadcrumb nav (Home > About), 'Who We Are' heading
+  - Company Story: 2-col grid (text left, image right) with 3 conversational first-person plural paragraphs under 'Built on Integrity, Driven by Craft'
+  - Core Values: 4-card grid (grid-cols-2 md:grid-cols-4) on cream bg — Integrity, Quality, Communication, Safety — each with SVG icon + 1-sentence explanation
+  - Meet the Team: 3-person grid with 600x600 circular portrait placeholders, names, titles (Founder & Principal / Project Manager / Site Superintendent), 2-sentence bios
+  - Certifications strip: 4-block grid (grid-cols-2 md:grid-cols-4) — Virginia Class A Contractor License, OSHA 30, NAHB Member, BBB Accredited
+  - CTA Banner: identical to home page (bg-navy, amber heading, tel: + contact.html buttons)
+  - All 2-column layouts collapse to 1 col on mobile
+- Files changed: about.html (created), ralph/tracks/prd.json, ralph/tracks/progress.txt
+- **Learnings for future iterations:**
+  - 50vh hero: use inline style `style="min-height: 50vh"` since Tailwind CDN doesn't support arbitrary values like `min-h-[50vh]` by default
+  - Breadcrumb: use `<nav aria-label="Breadcrumb"><ol class="flex items-center gap-2">` pattern for accessibility
+  - Team portrait circular crop: wrap `<img>` in `<div class="rounded-full overflow-hidden w-48 h-48 mx-auto">` — rounded-full on the container, not the img
+  - Core Values / Certifications both use grid-cols-2 md:grid-cols-4 giving 2x2 on mobile, 4-col on desktop
+  - Browser testing not available — manual verification needed
+---
