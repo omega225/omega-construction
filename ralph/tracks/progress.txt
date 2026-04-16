@@ -124,3 +124,29 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - Core Values / Certifications both use grid-cols-2 md:grid-cols-4 giving 2x2 on mobile, 4-col on desktop
   - Browser testing not available — manual verification needed
 ---
+
+## 2026-04-16 - US-007
+- What was implemented: Services page — service blocks & process timeline
+  - services.html created at repository root with full shared head, nav (active = Services), and footer
+  - Page hero: 50vh (inline style), placehold.co bg image, breadcrumb (Home > Services), 'What We Build' heading, subheadline
+  - 4 service blocks with alternating image/text layout across alternating bg-white / bg-cream sections:
+    - Block 1 (Custom Home Construction): img-left, text-right — default DOM order
+    - Block 2 (Renovation & Remodeling): img-right, text-left — image gets `md:order-last`, text gets `md:order-first`
+    - Block 3 (Commercial Construction): img-left, text-right — default DOM order
+    - Block 4 (Project Mgmt & Consulting): img-right, text-left — same as Block 2
+  - Each block: 1200x800 placehold.co image, amber "Service 0N" overline, serif heading, 2 paragraphs, 4 checkmark bullet points
+  - Mobile collapse: images always first in DOM → appear on top on mobile; text appears below
+  - Process timeline: 'How We Work' heading, 5 steps (Discovery Call / Site Assessment / Detailed Estimate / Build Phase / Final Walkthrough)
+  - Each step: amber circle with number, step name (font-serif), 1-sentence description
+  - Desktop: `flex flex-row` with `flex-1` on each step and `md:flex-col md:items-center md:text-center`
+  - Mobile: `flex flex-col` with each step as `flex flex-row` (number circle left, text right)
+  - Thin amber/30 border dividers between steps on desktop (hidden on mobile)
+  - CTA Banner identical to home/about pages at bottom
+- Files changed: services.html (created), ralph/tracks/prd.json, ralph/tracks/progress.txt
+- **Learnings for future iterations:**
+  - Alternating 2-col layout: put image first in HTML for mobile-top order; use `md:order-last` on image + `md:order-first` on text for the "flipped" blocks
+  - Process timeline dual-mode: `flex flex-row md:flex-col items-start md:items-center` on each step handles both orientations cleanly
+  - Desktop connector lines between timeline steps: `hidden md:flex items-start pt-6` wrapper with a `border-t-2 border-amber/30` div works for visual separation
+  - Service overline pattern: amber "Service 01" label above h2 provides visual hierarchy without needing a separate section intro
+  - Browser testing not available — manual verification needed
+---
