@@ -1,3 +1,30 @@
+## Codebase Patterns
+- Static HTML site: no build step, Tailwind via CDN, vanilla JS only
+- All interactivity in assets/js/main.js using IIFE modules and data attributes
+- Brand colors: navy #1A2E4A, amber #C8963E, cream #F7F4EF, slate #64748B
+- Fonts: Playfair Display (headings), Inter (body) — loaded via Google Fonts CDN
+- Tailwind config is inline in each HTML file's <script> tag (not a separate config file)
+- Placeholder images use placehold.co with brand colors
+- All inter-page links use relative paths (e.g., ./about.html, not /about.html)
+- Nav id="main-nav", toggle btn id="nav-toggle", mobile menu id="nav-mobile-menu"
+- Contact form id="contact-form" with field ids: field-name, field-email, field-description
+- Lightbox div id="lightbox", image id="lb-image", etc.
+---
+
 # Ralph Progress Log
 Started: Thu, Apr 16, 2026 12:20:46 AM
+---
+
+## 2026-04-16 - US-001
+- What was implemented: Project scaffold & shared assets
+  - Created directory structure: assets/css/, assets/js/, assets/images/placeholder/
+  - assets/css/custom.css: scroll-behavior smooth, .hero-overlay utility, transition defaults
+  - assets/js/main.js: mobile nav toggle, scroll-based nav bg switch, smooth-scroll, accordion, project filter, lightbox, contact form validation (all features pre-implemented for future stories)
+  - README.md: updated with GitHub Pages deploy steps and Formspree placeholder instructions
+- Files changed: README.md, assets/css/custom.css, assets/js/main.js
+- **Learnings for future iterations:**
+  - main.js pre-implements ALL interactivity for subsequent stories (accordion, filter, lightbox, form validation) — future stories just need to add the matching HTML with correct data attributes and IDs
+  - Nav uses id="main-nav" (scroll switch), id="nav-toggle" (hamburger), id="nav-mobile-menu" (mobile dropdown)
+  - Tailwind CDN config block and Google Fonts <link> will be repeated in every HTML file's <head> — define them consistently
+  - The .hero-overlay class provides the navy 60% overlay; pair with relative positioning on the parent
 ---
