@@ -1,0 +1,238 @@
+{
+  "project": "Omega Construction Website",
+  "branchName": "ralph/omega-construction-website",
+  "description": "Professional 6-page static website for Omega Construction — a Virginia-based residential and commercial general contractor. Built with plain HTML, Tailwind CSS (CDN), and vanilla JS. Deployable to GitHub Pages with zero build tooling.",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Project scaffold & shared assets",
+      "description": "As a developer, I need the file structure, Tailwind config, Google Fonts, shared CSS, and shared JS in place so every subsequent story has a consistent foundation to build on.",
+      "acceptanceCriteria": [
+        "Directory structure exists: assets/css/, assets/js/, assets/images/placeholder/",
+        "assets/css/custom.css created with: html { scroll-behavior: smooth }, hero overlay utility class, transition defaults",
+        "assets/js/main.js created with: mobile nav toggle, scroll-based nav background switch, smooth-scroll anchor handler",
+        "README.md documents GitHub Pages deployment steps and instructs developer to replace YOUR_FORM_ID in contact.html with a real Formspree endpoint",
+        "Tailwind config block (inline in a script tag) defines brand colors: navy #1A2E4A, amber #C8963E, cream #F7F4EF, slate #64748B and font families: Playfair Display (serif) and Inter (sans)",
+        "Google Fonts link tag loads Playfair Display and Inter with display=swap",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-002",
+      "title": "Shared nav & footer HTML partials documented",
+      "description": "As a developer, I need the exact nav and footer HTML written out once (in a comment block or standalone reference file) so I can copy-paste them consistently into every page without drift.",
+      "acceptanceCriteria": [
+        "index.html created at repository root containing the full shared <head> block (charset, viewport, title, Google Fonts, Tailwind CDN script with config, custom.css link)",
+        "Nav markup inside index.html: fixed top, navy bg, Ω OMEGA CONSTRUCTION logo with amber omega glyph, links (Home / About / Services / Projects / Contact), amber 'Get a Quote' CTA button, hamburger button for mobile",
+        "Footer markup inside index.html: navy bg, 3-column layout (logo+tagline / quick links / contact details), copyright line '© 2025 Omega Construction LLC. All rights reserved.'",
+        "Nav hamburger toggles mobile menu open/closed via main.js (no CSS-only hack)",
+        "Nav background switches from transparent to solid navy when user scrolls past 50px",
+        "Active page link on Home is highlighted with amber color or underline",
+        "All nav and footer links use relative paths (e.g., ./about.html not /about.html)",
+        "Footer is responsive: 3 columns on desktop, stacked single column on mobile",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "Home page — Hero & Trust Bar sections",
+      "description": "As a first-time visitor, I want to land on a strong, full-screen hero with a clear headline and two CTA buttons, followed by a trust bar showing key stats, so I immediately understand who Omega is and feel confident.",
+      "acceptanceCriteria": [
+        "Hero section is full viewport height (min-h-screen) with a placeholder background image (1920x1080, placehold.co brand colors) and a navy overlay at 60% opacity",
+        "Hero headline: 'Built to Last. Built for You.' in Playfair Display, white, large (text-5xl md:text-7xl)",
+        "Hero sub-headline: 'Omega Construction delivers residential and commercial projects across Virginia — on time, on budget, and built right.' in Inter, white/80 opacity",
+        "Two CTA buttons: 'View Our Work' links to ./projects.html, 'Get a Free Quote' links to ./contact.html",
+        "Animated scroll-down chevron at hero bottom center",
+        "Trust bar below hero: cream background, 4 stat blocks (25+ Years Experience / 300+ Projects Completed / Residential & Commercial / Licensed & Insured), amber number + slate label",
+        "Trust bar is responsive: 4 columns on desktop, 2x2 on tablet, 2x2 on mobile",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-004",
+      "title": "Home page — Services Overview & Featured Projects sections",
+      "description": "As a first-time visitor, I want to see what Omega offers and get a glimpse of their portfolio so I can quickly decide if they match my project needs.",
+      "acceptanceCriteria": [
+        "Services Overview section: amber overline 'What We Do', heading 'End-to-End Construction Services', 3-column card grid (New Construction / Renovation & Remodeling / Commercial Build-Out)",
+        "Each service card has: inline SVG icon, title, 2-sentence description, amber 'Learn More →' link to ./services.html",
+        "Card grid collapses to 1 column on mobile",
+        "Featured Projects section: amber overline 'Our Work', heading 'Projects We're Proud Of', 3 project cards with 1200x800 placeholder images, project name, Residential/Commercial tag",
+        "Each project card has a 'View Project' link to ./projects.html",
+        "Amber 'See All Projects →' text link below project grid links to ./projects.html",
+        "Both sections use max-w-7xl mx-auto px-6 and py-20 vertical padding",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-005",
+      "title": "Home page — Why Choose Omega, Testimonials & CTA Banner sections",
+      "description": "As a first-time visitor, I want to read about Omega's differentiators and real client feedback, then be prompted to take action, so I feel ready to reach out.",
+      "acceptanceCriteria": [
+        "Why Choose Omega section: 2-column layout (placeholder image left, text right), heading 'Your Project. Our Commitment.', 4 checkmark bullet points (Transparent Pricing / Dedicated Project Manager / Clean Jobsites / Warranty on Workmanship), 'About Our Team' button links to ./about.html",
+        "Two-column layout stacks to single column on mobile (image on top)",
+        "Testimonials section: cream background, 3 cards with placeholder quote text, client name, and project type label",
+        "CTA Banner: navy background, amber headline 'Ready to Start Your Project?', body copy, 'Call (703) 555-0192' button uses tel: link, 'Send Us a Message' button links to ./contact.html",
+        "Home page has no horizontal scrollbar at 375px viewport width",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-006",
+      "title": "About page — full build",
+      "description": "As a potential client, I want to learn about Omega's history, values, team, and credentials so I can decide if I trust them with my project.",
+      "acceptanceCriteria": [
+        "about.html created at repository root with full shared head, nav (active link = About), and footer",
+        "Page hero: 50vh height, placeholder background image, breadcrumb 'Home > About', heading 'Who We Are'",
+        "Company Story section: 2-column (text left, placeholder image right), heading 'Built on Integrity, Driven by Craft', 3 placeholder paragraphs in conversational first-person plural tone",
+        "Core Values section: 4-card grid (Integrity / Quality / Communication / Safety), each with SVG icon and 1-sentence explanation; 4 columns on desktop, 2x2 on mobile",
+        "Meet the Team section: 3-person grid with 600x600 placeholder portrait images, name, title, 2-sentence bio (roles: Founder & Principal / Project Manager / Site Superintendent)",
+        "Certifications strip: 4 placeholder affiliation blocks in a horizontal row (Virginia Class A Contractor License / OSHA 30 Certified / NAHB Member / BBB Accredited)",
+        "CTA Banner (same as home) at bottom",
+        "All 2-column layouts collapse to single column on mobile",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-007",
+      "title": "Services page — service blocks & process timeline",
+      "description": "As a visitor, I want to read detailed descriptions of each service Omega offers and understand their process step-by-step so I can confirm they handle my project type.",
+      "acceptanceCriteria": [
+        "services.html created at repository root with full shared head, nav (active link = Services), and footer",
+        "Page hero: 50vh, heading 'What We Build', subheadline about full-service construction",
+        "4 service blocks with alternating image/text layout (img-left/text-right then flip): Custom Home Construction / Renovation & Remodeling / Commercial Construction / Project Management & Consulting",
+        "Each block has: 1200x800 placeholder image, heading, 2-paragraph description, bullet list of 4 specifics",
+        "Alternating layout collapses to stacked (image on top, text below) on mobile",
+        "Process timeline: heading 'How We Work', 5 steps (Discovery Call / Site Assessment / Detailed Estimate / Build Phase / Final Walkthrough)",
+        "Each step has amber numbered circle, step name, 1-sentence description",
+        "Timeline is horizontal on desktop (flex row), vertical on mobile (flex column with left-aligned numbers)",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-008",
+      "title": "Services page — FAQ accordion",
+      "description": "As a visitor, I want to expand and collapse common questions about Omega's services so I can get quick answers without leaving the page.",
+      "acceptanceCriteria": [
+        "FAQ section added to services.html below the process timeline, heading 'Common Questions'",
+        "6 Q&A items covering: licensing, service area, timeline estimates, payment terms, subcontractors, permits",
+        "Each item: question row (clickable, amber chevron icon), answer panel (hidden by default)",
+        "Clicking a question expands its answer and collapses any previously open answer (only one open at a time)",
+        "Chevron rotates 180° when item is open (CSS transform transition)",
+        "Accordion logic implemented in main.js using data attributes and classList toggle",
+        "CTA Banner added after FAQ section",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 8,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-009",
+      "title": "Projects page — grid & filter",
+      "description": "As a potential client, I want to browse Omega's portfolio and filter by project type so I can find examples relevant to my own project.",
+      "acceptanceCriteria": [
+        "projects.html created at repository root with full shared head, nav (active link = Projects), and footer",
+        "Page hero: 50vh, heading 'Our Work', subheadline",
+        "Filter bar: 3 toggle buttons (All / Residential / Commercial), amber underline/fill on active button, outlined style on inactive",
+        "9 project cards in a 3-column grid (2-col on tablet, 1-col on mobile): 5 residential + 4 commercial",
+        "Each card: 1200x800 placeholder image, project name (e.g. 'Fairfax Custom Home'), type tag, hover overlay with brief description and 'View Details' button",
+        "Clicking a filter button shows/hides cards by toggling CSS 'hidden' class based on data-type attribute — no page reload",
+        "Active filter state updates correctly when switching between All / Residential / Commercial",
+        "Grid layout does not break or leave gaps when some cards are hidden",
+        "CTA Banner at bottom",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 9,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-010",
+      "title": "Projects page — lightbox",
+      "description": "As a potential client, I want to click a project card and see an enlarged image with project details in an overlay so I can review the work without leaving the page.",
+      "acceptanceCriteria": [
+        "Clicking 'View Details' on any project card opens a full-screen lightbox overlay",
+        "Lightbox shows: large version of project image, project name, location, scope (1-sentence), completion year",
+        "Lightbox has an X close button in the top-right corner",
+        "Clicking outside the lightbox panel closes it",
+        "Pressing Escape key closes the lightbox",
+        "Lightbox open/close implemented in main.js with no external library",
+        "Body scroll is locked (overflow: hidden) while lightbox is open",
+        "Lightbox is fully usable on mobile (image scales to fit screen width)",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 10,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-011",
+      "title": "Contact page — full build",
+      "description": "As a ready-to-hire visitor, I want to easily reach Omega by phone or inquiry form, with zero friction, so I can start my project without confusion.",
+      "acceptanceCriteria": [
+        "contact.html created at repository root with full shared head, nav (active link = Contact), and footer",
+        "Page hero: 40vh, heading 'Let's Talk About Your Project', friendly subheadline",
+        "Left column (40% desktop): phone (703) 555-0192 as large tel: link, email info@omegaconstruction.com as mailto: link, office hours Mon-Fri 7am-5pm, service area text, static placeholder map image",
+        "Right column (60% desktop): inquiry form with fields: Full Name (required), Email (required), Phone, Project Type dropdown (Residential / Commercial / Not Sure), Project Description textarea (required), Preferred Contact Method radio (Phone / Email)",
+        "Form submit button: amber, text 'Send My Inquiry', full-width on mobile",
+        "Form action='https://formspree.io/f/YOUR_FORM_ID' method='POST' with YOUR_FORM_ID clearly marked as a placeholder",
+        "Client-side JS validation in main.js: submitting with empty required fields (Name, Email, Description) shows inline red error messages and prevents submission",
+        "On successful Formspree submission, form is replaced with a thank-you message: 'Thank you! We'll be in touch within 1 business day.'",
+        "Two-column layout stacks to single column on mobile (contact info on top, form below)",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 11,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-012",
+      "title": "404 page",
+      "description": "As a lost visitor, I want a friendly error page with clear navigation options so I'm not stranded and can easily return to the site.",
+      "acceptanceCriteria": [
+        "404.html created at repository root with full shared head, nav, and footer",
+        "Page title in browser tab: '404 — Page Not Found | Omega Construction'",
+        "Centered content area: large '404' text in amber (text-9xl), heading 'Page Not Found' in navy Playfair Display, friendly body copy explaining the page doesn't exist",
+        "'Go Home' button links to ./index.html",
+        "'Contact Us' button links to ./contact.html",
+        "Page renders correctly at 375px mobile width",
+        "Verify in browser using dev-browser skill",
+        "Typecheck passes"
+      ],
+      "priority": 12,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}
