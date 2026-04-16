@@ -73,3 +73,21 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - Scroll chevron: `animate-bounce` is a built-in Tailwind utility (no custom CSS needed)
   - placehold.co URLs: `https://placehold.co/{W}x{H}/{bg-hex}/{text-hex}?text=...` (omit # from hex)
 ---
+
+## 2026-04-16 - US-004
+- What was implemented: Home page — Services Overview & Featured Projects sections
+  - Services Overview section added: amber overline 'What We Do', h2 'End-to-End Construction Services', 3-card grid
+  - Each card: inline SVG icon (construction theme), title, 2-sentence description, amber 'Learn More →' link → ./services.html
+  - Cards use `grid-cols-1 md:grid-cols-3` — collapses to 1 col on mobile
+  - Featured Projects section added: amber overline 'Our Work', h2 'Projects We're Proud Of', 3 project cards
+  - Project cards: 1200x800 placehold.co images (varied brand-color combos), project name, Residential/Commercial tag, 'View Project →' link → ./projects.html
+  - Hover effect on project images: scale-105 with group/group-hover Tailwind pattern
+  - 'See All Projects →' amber text link below grid → ./projects.html
+  - Both sections use `max-w-7xl mx-auto px-6` and `py-20`
+- Files changed: index.html
+- **Learnings for future iterations:**
+  - Service cards use `flex flex-col` with `flex-1` on the description and `mt-6` on the link to push link to bottom
+  - Project card hover image zoom: wrap `<img>` in `<div class="relative overflow-hidden">`, add `group` on outer div, `group-hover:scale-105 transition-transform duration-500` on img
+  - Placeholder comment (`<!-- Home page sections US-004 and US-005 will be added here -->`) was replaced; US-005 comment now reads `<!-- Home page section US-005 will be added here -->`
+  - Browser testing not available — manual verification needed
+---
