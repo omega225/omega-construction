@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Omega Construction</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN with brand config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  '#1A2E4A',
+            amber: '#C8963E',
+            cream: '#F7F4EF',
+            slate: '#64748B',
+          },
+          fontFamily: {
+            serif:  ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:   ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/custom.css" />
+</head>
+<body class="font-sans text-navy bg-white">
+
+  <!-- ═══════════════════════════════════════════════════════════ NAV ══ -->
+  <nav
+    id="main-nav"
+    class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-navy"
+  >
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="./index.html" class="flex items-center gap-2 text-white font-serif font-bold text-xl tracking-wide">
+          <span class="text-amber text-2xl leading-none">Ω</span>
+          <span>OMEGA CONSTRUCTION</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="./index.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Home</a>
+          <a href="./about.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">About</a>
+          <a href="./services.html" class="text-amber border-b-2 border-amber pb-0.5 font-medium text-sm uppercase tracking-wider">Services</a>
+          <a href="./projects.html" class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Projects</a>
+          <a href="./contact.html"  class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Contact</a>
+          <a
+            href="./contact.html"
+            class="ml-2 bg-amber hover:bg-amber/90 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2.5 rounded transition-colors"
+          >Get a Quote</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button
+          id="nav-toggle"
+          class="md:hidden text-white p-2 focus:outline-none"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="nav-mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="./index.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Home</a>
+        <a href="./about.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">About</a>
+        <a href="./services.html" class="text-amber font-medium text-sm uppercase tracking-wider">Services</a>
+        <a href="./projects.html" class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Projects</a>
+        <a href="./contact.html"  class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Contact</a>
+        <a
+          href="./contact.html"
+          class="bg-amber hover:bg-amber/90 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2.5 rounded text-center transition-colors"
+        >Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+  <!-- ══════════════════════════════════════════════════ END NAV ══════ -->
+
+
+  <!-- ══════════════════════════════════════════════════ MAIN ═════════ -->
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════ HERO ═══════ -->
+    <section class="relative flex flex-col items-center justify-center text-center overflow-hidden" style="min-height: 50vh;">
+
+      <!-- Background Image -->
+      <img
+        src="https://placehold.co/1920x1080/1A2E4A/C8963E?text=Omega+Construction+Services"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- Navy overlay at 60% -->
+      <div class="hero-overlay"></div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-4xl mx-auto px-6 py-20 pt-32">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex items-center justify-center gap-2 text-white/60 text-sm">
+            <li><a href="./index.html" class="hover:text-amber transition-colors">Home</a></li>
+            <li aria-hidden="true">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </li>
+            <li class="text-amber font-medium">Services</li>
+          </ol>
+        </nav>
+        <h1 class="font-serif text-5xl md:text-6xl font-bold text-white leading-tight mb-4">
+          What We Build
+        </h1>
+        <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+          From the foundation to the finishing touches, Omega Construction delivers full-service residential and commercial construction across Virginia.
+        </p>
+      </div>
+    </section>
+    <!-- ════════════════════════════════════════════════ END HERO ══════ -->
+
+
+    <!-- ══════════════════════════════════ SERVICE BLOCK 1 ═══════════ -->
+    <!-- Custom Home Construction — Image LEFT, Text RIGHT -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+          <!-- Image (left on desktop, top on mobile — first in DOM) -->
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="https://placehold.co/1200x800/1A2E4A/C8963E?text=Custom+Home+Construction"
+              alt="Custom Home Construction"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Text (right on desktop, bottom on mobile) -->
+          <div>
+            <p class="text-amber font-semibold text-sm uppercase tracking-widest mb-3">Service 01</p>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+              Custom Home Construction
+            </h2>
+            <p class="text-slate leading-relaxed mb-4">
+              Your home is the most personal project you'll ever undertake, and we treat it that way. We work closely with you from the initial design consultation through the final walkthrough to ensure every detail reflects your vision, your lifestyle, and your budget.
+            </p>
+            <p class="text-slate leading-relaxed mb-6">
+              Our team of experienced builders brings decades of residential construction expertise to every custom home we build, and we manage every trade in-house to maintain quality control at every stage of the process.
+            </p>
+            <ul class="space-y-2 text-slate">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Ground-up builds on existing lots or land you purchase</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Full design-build services and architect coordination</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Energy-efficient construction and smart home integration</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Detailed cost estimates with no hidden fees or surprises</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ════════════════════════════════ END SERVICE BLOCK 1 ══════════ -->
+
+
+    <!-- ══════════════════════════════════ SERVICE BLOCK 2 ═══════════ -->
+    <!-- Renovation & Remodeling — Text LEFT, Image RIGHT -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+          <!-- Image (right on desktop via md:order-last, top on mobile — first in DOM) -->
+          <div class="rounded-lg overflow-hidden shadow-lg md:order-last">
+            <img
+              src="https://placehold.co/1200x800/C8963E/1A2E4A?text=Renovation+%26+Remodeling"
+              alt="Renovation and Remodeling"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Text (left on desktop via md:order-first, bottom on mobile) -->
+          <div class="md:order-first">
+            <p class="text-amber font-semibold text-sm uppercase tracking-widest mb-3">Service 02</p>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+              Renovation &amp; Remodeling
+            </h2>
+            <p class="text-slate leading-relaxed mb-4">
+              Transforming an existing space requires just as much skill and planning as building from scratch — sometimes more. We specialize in renovations that honor the character of your existing home while delivering modern functionality and finishes that feel completely new.
+            </p>
+            <p class="text-slate leading-relaxed mb-6">
+              From a single room refresh to a whole-house renovation, our crews minimize disruption to your daily life and maintain clean, organized job sites throughout every phase of the project.
+            </p>
+            <ul class="space-y-2 text-slate">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Kitchen and bathroom remodels with full design coordination</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Basement finishing and addition construction</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Structural modifications, room conversions, and open-plan layouts</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Historic and period-appropriate renovation work</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ════════════════════════════════ END SERVICE BLOCK 2 ══════════ -->
+
+
+    <!-- ══════════════════════════════════ SERVICE BLOCK 3 ═══════════ -->
+    <!-- Commercial Construction — Image LEFT, Text RIGHT -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+          <!-- Image (left on desktop, top on mobile — first in DOM) -->
+          <div class="rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="https://placehold.co/1200x800/1A2E4A/F7F4EF?text=Commercial+Construction"
+              alt="Commercial Construction"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Text (right on desktop, bottom on mobile) -->
+          <div>
+            <p class="text-amber font-semibold text-sm uppercase tracking-widest mb-3">Service 03</p>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+              Commercial Construction
+            </h2>
+            <p class="text-slate leading-relaxed mb-4">
+              Commercial projects demand a higher level of coordination, compliance expertise, and schedule discipline than residential work. We bring the same craft and commitment to every commercial build while meeting the additional regulatory and operational requirements that come with the territory.
+            </p>
+            <p class="text-slate leading-relaxed mb-6">
+              Our commercial division handles everything from retail fit-outs and office renovations to ground-up mixed-use developments, always with an eye on your timeline and your bottom line.
+            </p>
+            <ul class="space-y-2 text-slate">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Office, retail, and medical facility build-outs and renovations</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>ADA compliance and commercial code expertise</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Phased construction to minimize business disruption</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Ground-up commercial builds and mixed-use developments</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ════════════════════════════════ END SERVICE BLOCK 3 ══════════ -->
+
+
+    <!-- ══════════════════════════════════ SERVICE BLOCK 4 ═══════════ -->
+    <!-- Project Management & Consulting — Text LEFT, Image RIGHT -->
+    <section class="py-20 bg-cream">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+          <!-- Image (right on desktop via md:order-last, top on mobile — first in DOM) -->
+          <div class="rounded-lg overflow-hidden shadow-lg md:order-last">
+            <img
+              src="https://placehold.co/1200x800/64748B/F7F4EF?text=Project+Management+%26+Consulting"
+              alt="Project Management and Consulting"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Text (left on desktop via md:order-first, bottom on mobile) -->
+          <div class="md:order-first">
+            <p class="text-amber font-semibold text-sm uppercase tracking-widest mb-3">Service 04</p>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+              Project Management &amp; Consulting
+            </h2>
+            <p class="text-slate leading-relaxed mb-4">
+              Not every client needs Omega to swing the hammers — some just need a trusted expert in their corner to make sure the right work gets done the right way. Our consulting services provide professional oversight, planning, and accountability for projects where you're sourcing your own trades or managing the build yourself.
+            </p>
+            <p class="text-slate leading-relaxed mb-6">
+              Whether you need a pre-purchase inspection, a second opinion on a contractor's estimate, or ongoing construction management support, we bring our full expertise to bear on your behalf without the full general contractor markup.
+            </p>
+            <ul class="space-y-2 text-slate">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Owner's representative services and third-party oversight</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Contractor vetting, bid review, and contract negotiation</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Schedule and budget monitoring with weekly reporting</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-amber flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                <span>Pre-purchase property assessments and construction feasibility studies</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ════════════════════════════════ END SERVICE BLOCK 4 ══════════ -->
+
+
+    <!-- ══════════════════════════════ PROCESS TIMELINE ══════════════ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Section header -->
+        <div class="text-center mb-14">
+          <p class="text-amber font-semibold text-sm uppercase tracking-widest mb-3">Our Approach</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-navy">How We Work</h2>
+        </div>
+
+        <!-- Timeline: flex-col on mobile (number left, text right), flex-row on desktop (number top, text below) -->
+        <div class="flex flex-col md:flex-row gap-8 md:gap-4">
+
+          <!-- Step 1: Discovery Call -->
+          <div class="flex flex-row md:flex-col items-start md:items-center flex-1 gap-4 md:gap-0 md:text-center">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber text-white font-bold font-serif text-xl flex items-center justify-center shadow-md">1</div>
+            <div class="md:mt-5">
+              <h3 class="font-serif text-xl font-bold text-navy mb-2">Discovery Call</h3>
+              <p class="text-slate text-sm leading-relaxed">We start with a free 30-minute phone or video call to understand your project goals, timeline, and budget so we can determine how Omega can best help.</p>
+            </div>
+          </div>
+
+          <!-- Connector (desktop only) -->
+          <div class="hidden md:flex items-start pt-6 flex-shrink-0">
+            <div class="w-8 border-t-2 border-amber/30 mt-0"></div>
+          </div>
+
+          <!-- Step 2: Site Assessment -->
+          <div class="flex flex-row md:flex-col items-start md:items-center flex-1 gap-4 md:gap-0 md:text-center">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber text-white font-bold font-serif text-xl flex items-center justify-center shadow-md">2</div>
+            <div class="md:mt-5">
+              <h3 class="font-serif text-xl font-bold text-navy mb-2">Site Assessment</h3>
+              <p class="text-slate text-sm leading-relaxed">We visit the property in person to evaluate existing conditions, identify any potential challenges, and gather the information needed to prepare an accurate, detailed estimate.</p>
+            </div>
+          </div>
+
+          <!-- Connector (desktop only) -->
+          <div class="hidden md:flex items-start pt-6 flex-shrink-0">
+            <div class="w-8 border-t-2 border-amber/30 mt-0"></div>
+          </div>
+
+          <!-- Step 3: Detailed Estimate -->
+          <div class="flex flex-row md:flex-col items-start md:items-center flex-1 gap-4 md:gap-0 md:text-center">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber text-white font-bold font-serif text-xl flex items-center justify-center shadow-md">3</div>
+            <div class="md:mt-5">
+              <h3 class="font-serif text-xl font-bold text-navy mb-2">Detailed Estimate</h3>
+              <p class="text-slate text-sm leading-relaxed">You receive a comprehensive, line-item estimate covering all materials, labor, and contingencies — no vague allowances or hidden costs that inflate later.</p>
+            </div>
+          </div>
+
+          <!-- Connector (desktop only) -->
+          <div class="hidden md:flex items-start pt-6 flex-shrink-0">
+            <div class="w-8 border-t-2 border-amber/30 mt-0"></div>
+          </div>
+
+          <!-- Step 4: Build Phase -->
+          <div class="flex flex-row md:flex-col items-start md:items-center flex-1 gap-4 md:gap-0 md:text-center">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber text-white font-bold font-serif text-xl flex items-center justify-center shadow-md">4</div>
+            <div class="md:mt-5">
+              <h3 class="font-serif text-xl font-bold text-navy mb-2">Build Phase</h3>
+              <p class="text-slate text-sm leading-relaxed">Our crews get to work according to an agreed-upon schedule, with your dedicated project manager providing regular updates and handling any decisions that arise along the way.</p>
+            </div>
+          </div>
+
+          <!-- Connector (desktop only) -->
+          <div class="hidden md:flex items-start pt-6 flex-shrink-0">
+            <div class="w-8 border-t-2 border-amber/30 mt-0"></div>
+          </div>
+
+          <!-- Step 5: Final Walkthrough -->
+          <div class="flex flex-row md:flex-col items-start md:items-center flex-1 gap-4 md:gap-0 md:text-center">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber text-white font-bold font-serif text-xl flex items-center justify-center shadow-md">5</div>
+            <div class="md:mt-5">
+              <h3 class="font-serif text-xl font-bold text-navy mb-2">Final Walkthrough</h3>
+              <p class="text-slate text-sm leading-relaxed">We walk through the finished space together to verify every item on our punch list is complete and that you are fully satisfied before we consider the project closed.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ══════════════════════════════ END PROCESS TIMELINE ══════════ -->
+
+
+    <!-- ═══════════════════════════════════ CTA BANNER ═══════════════════ -->
+    <section class="bg-navy py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-amber mb-6 leading-tight">
+          Ready to Start Your Project?
+        </h2>
+        <p class="text-white/80 text-lg leading-relaxed mb-10">
+          Whether you're planning a custom home, a commercial build, or a full renovation, our team is ready to bring your vision to life. Reach out today for a no-obligation consultation.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="tel:+17035550192"
+            class="bg-amber hover:bg-amber/90 text-white font-semibold uppercase tracking-wider text-sm px-8 py-3.5 rounded transition-colors w-full sm:w-auto"
+          >Call (703) 555-0192</a>
+          <a
+            href="./contact.html"
+            class="border-2 border-white text-white hover:bg-white hover:text-navy font-semibold uppercase tracking-wider text-sm px-8 py-3.5 rounded transition-colors w-full sm:w-auto"
+          >Send Us a Message</a>
+        </div>
+      </div>
+    </section>
+    <!-- ════════════════════════════════════ END CTA BANNER ══════════════ -->
+
+  </main>
+  <!-- ══════════════════════════════════════════════════════════════════ -->
+
+
+  <!-- ════════════════════════════════════════════════════ FOOTER ═════ -->
+  <footer class="bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+      <!-- 3-column grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Column 1 — Logo & Tagline -->
+        <div>
+          <a href="./index.html" class="flex items-center gap-2 font-serif font-bold text-xl tracking-wide mb-3">
+            <span class="text-amber text-2xl leading-none">Ω</span>
+            <span>OMEGA CONSTRUCTION</span>
+          </a>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Virginia's trusted general contractor for residential and commercial projects — built right, every time.
+          </p>
+        </div>
+
+        <!-- Column 2 — Quick Links -->
+        <div>
+          <h3 class="text-amber font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./index.html"    class="text-white/70 hover:text-amber transition-colors">Home</a></li>
+            <li><a href="./about.html"    class="text-white/70 hover:text-amber transition-colors">About Us</a></li>
+            <li><a href="./services.html" class="text-white/70 hover:text-amber transition-colors">Services</a></li>
+            <li><a href="./projects.html" class="text-white/70 hover:text-amber transition-colors">Projects</a></li>
+            <li><a href="./contact.html"  class="text-white/70 hover:text-amber transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 — Contact Details -->
+        <div>
+          <h3 class="text-amber font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</h3>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>
+              <a href="tel:+17035550192" class="hover:text-amber transition-colors">(703) 555-0192</a>
+            </li>
+            <li>
+              <a href="mailto:info@omegaconstruction.com" class="hover:text-amber transition-colors">info@omegaconstruction.com</a>
+            </li>
+            <li class="pt-1">Mon – Fri &nbsp;7 am – 5 pm</li>
+            <li>Serving Northern Virginia &amp; surrounding areas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-12 border-t border-white/10 pt-6 text-center text-white/40 text-xs">
+        &copy; 2025 Omega Construction LLC. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+  <!-- ══════════════════════════════════════════════════ END FOOTER ══ -->
+
+  <!-- Main JS -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
