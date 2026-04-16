@@ -91,3 +91,17 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - Placeholder comment (`<!-- Home page sections US-004 and US-005 will be added here -->`) was replaced; US-005 comment now reads `<!-- Home page section US-005 will be added here -->`
   - Browser testing not available — manual verification needed
 ---
+
+## 2026-04-16 - US-005
+- What was implemented: Home page — Why Choose Omega, Testimonials & CTA Banner sections
+  - Why Choose Omega: 2-col layout (image left on desktop, stacked on mobile via grid-cols-1 md:grid-cols-2), heading 'Your Project. Our Commitment.', 4 checkmark bullet points with SVG check icons and descriptions, 'About Our Team' button → ./about.html
+  - Testimonials: bg-cream section, 3 white cards with quote SVG icon, placeholder quote text, client name, project type label in amber
+  - CTA Banner: bg-navy, amber heading 'Ready to Start Your Project?', two CTA buttons — tel: link for phone, ./contact.html for message — responsive stacked on mobile
+  - Replaced `<!-- Home page section US-005 will be added here -->` placeholder in index.html
+- Files changed: index.html, ralph/tracks/prd.json, ralph/tracks/progress.txt
+- **Learnings for future iterations:**
+  - Reusable CTA Banner pattern established (bg-navy, amber heading, 2 CTA buttons) — copy for all remaining pages (About, Services, Projects, Contact)
+  - Testimonial card: bg-white on bg-cream section for contrast, quote SVG icon in amber, flex-col with flex-1 on quote text to push client block to bottom
+  - Two-column image+text: use `order-first` on image div so it appears on top when grid collapses to 1 col on mobile
+  - Browser testing not available — manual verification needed
+---
