@@ -206,3 +206,24 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - `dl/dt/dd` semantic grid pattern works well for labeled metadata (location, scope, year)
   - Browser testing not available — manual verification needed
 ---
+
+## 2026-04-16 - US-011
+- What was implemented: Contact page — full build
+  - contact.html created at repository root with full shared head, nav (active = Contact), footer
+  - Page hero: 40vh (inline style), placehold.co bg image, breadcrumb (Home > Contact), heading 'Let's Talk About Your Project', friendly subheadline
+  - Two-column layout: md:grid-cols-5 with left=md:col-span-2 (contact info) and right=md:col-span-3 (form); stacks to 1 col on mobile
+  - Left column: large tel: link for phone (font-serif text-3xl), mailto: link for email, office hours, service area text, placeholder map image
+  - Right column: inquiry form id="contact-form" with fields: field-name (required), field-email (required), field-phone (optional), field-project-type (select dropdown: Residential/Commercial/Not Sure), field-description textarea (required), preferred_contact radio (Phone/Email, default=Email)
+  - Form action='https://formspree.io/f/YOUR_FORM_ID' method='POST' — YOUR_FORM_ID marked as placeholder in inline HTML comment
+  - Submit button: amber bg, 'Send My Inquiry', full-width on mobile (w-full sm:w-auto)
+  - JS validation already in main.js (field-name, field-email, field-description + formspree:success handler)
+  - CTA Banner at bottom uses mailto: link for 'Email Us Directly' instead of redundant contact.html link
+- Files changed: contact.html (created), ralph/tracks/prd.json, ralph/tracks/progress.txt
+- **Learnings for future iterations:**
+  - Contact form JS validation + formspree:success thank-you swap was pre-built in main.js — just need HTML with id="contact-form", field-name, field-email, field-description
+  - md:grid-cols-5 with col-span-2 / col-span-3 gives clean 40%/60% split without sub-pixel rounding issues
+  - 40vh hero: use inline style `style="min-height: 40vh"` (same pattern as 50vh pages)
+  - Radio inputs: use `class="accent-amber"` for brand-colored checked state (Tailwind utility)
+  - Select dropdown: add `appearance-none` class to remove browser default arrow if using custom styling
+  - Browser testing not available — manual verification needed
+---
