@@ -513,6 +513,59 @@
   </footer>
   <!-- ══════════════════════════════════════════════════ END FOOTER ══ -->
 
+  <!-- ══════════════════════════════════════════════════ LIGHTBOX ════ -->
+  <div
+    id="lightbox"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Project details"
+  >
+    <!-- Lightbox panel -->
+    <div class="relative bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+
+      <!-- Close button -->
+      <button
+        id="lb-close"
+        class="absolute top-3 right-3 z-10 bg-navy/80 hover:bg-navy text-white w-9 h-9 rounded-full flex items-center justify-center transition-colors"
+        aria-label="Close lightbox"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Project image -->
+      <img
+        id="lb-image"
+        src=""
+        alt="Project image"
+        class="w-full object-cover rounded-t-lg max-h-[50vh]"
+      />
+
+      <!-- Project details -->
+      <div class="p-6">
+        <h2 id="lb-name" class="font-serif text-2xl font-bold text-navy mb-4"></h2>
+        <dl class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+          <div>
+            <dt class="text-amber font-semibold uppercase tracking-wider text-xs mb-1">Location</dt>
+            <dd id="lb-location" class="text-navy font-medium"></dd>
+          </div>
+          <div class="sm:col-span-2">
+            <dt class="text-amber font-semibold uppercase tracking-wider text-xs mb-1">Project Scope</dt>
+            <dd id="lb-scope" class="text-slate leading-relaxed"></dd>
+          </div>
+          <div>
+            <dt class="text-amber font-semibold uppercase tracking-wider text-xs mb-1">Completed</dt>
+            <dd id="lb-year" class="text-navy font-medium"></dd>
+          </div>
+        </dl>
+      </div>
+
+    </div>
+  </div>
+  <!-- ════════════════════════════════════════════════ END LIGHTBOX ══ -->
+
   <!-- Main JS -->
   <script src="./assets/js/main.js"></script>
 
