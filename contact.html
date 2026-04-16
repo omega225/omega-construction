@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Omega Construction</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN with brand config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  '#1A2E4A',
+            amber: '#C8963E',
+            cream: '#F7F4EF',
+            slate: '#64748B',
+          },
+          fontFamily: {
+            serif:  ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:   ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/custom.css" />
+</head>
+<body class="font-sans text-navy bg-white">
+
+  <!-- ═══════════════════════════════════════════════════════════ NAV ══ -->
+  <nav
+    id="main-nav"
+    class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-navy"
+  >
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="./index.html" class="flex items-center gap-2 text-white font-serif font-bold text-xl tracking-wide">
+          <span class="text-amber text-2xl leading-none">Ω</span>
+          <span>OMEGA CONSTRUCTION</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="./index.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Home</a>
+          <a href="./about.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">About</a>
+          <a href="./services.html" class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Services</a>
+          <a href="./projects.html" class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Projects</a>
+          <a href="./contact.html"  class="text-amber border-b-2 border-amber pb-0.5 font-medium text-sm uppercase tracking-wider">Contact</a>
+          <a
+            href="./contact.html"
+            class="ml-2 bg-amber hover:bg-amber/90 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2.5 rounded transition-colors"
+          >Get a Quote</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button
+          id="nav-toggle"
+          class="md:hidden text-white p-2 focus:outline-none"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="nav-mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="./index.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Home</a>
+        <a href="./about.html"    class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">About</a>
+        <a href="./services.html" class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Services</a>
+        <a href="./projects.html" class="text-white hover:text-amber transition-colors text-sm uppercase tracking-wider font-medium">Projects</a>
+        <a href="./contact.html"  class="text-amber font-medium text-sm uppercase tracking-wider">Contact</a>
+        <a
+          href="./contact.html"
+          class="bg-amber hover:bg-amber/90 text-white text-sm font-semibold uppercase tracking-wider px-5 py-2.5 rounded text-center transition-colors"
+        >Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+  <!-- ══════════════════════════════════════════════════ END NAV ══════ -->
+
+
+  <!-- ══════════════════════════════════════════════════ MAIN ═════════ -->
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════ HERO ═══════ -->
+    <section class="relative flex flex-col items-center justify-center text-center overflow-hidden" style="min-height: 40vh;">
+
+      <!-- Background Image -->
+      <img
+        src="https://placehold.co/1920x800/1A2E4A/C8963E?text=Contact+Omega+Construction"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- Navy overlay at 60% -->
+      <div class="hero-overlay"></div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-4xl mx-auto px-6 py-16 pt-32">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-4">
+          <ol class="flex items-center justify-center gap-2 text-white/60 text-sm">
+            <li><a href="./index.html" class="hover:text-amber transition-colors">Home</a></li>
+            <li aria-hidden="true">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </li>
+            <li class="text-amber font-medium">Contact</li>
+          </ol>
+        </nav>
+        <h1 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+          Let's Talk About Your Project
+        </h1>
+        <p class="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+          We'd love to hear what you're planning. Reach out and one of our team members will get back to you within one business day.
+        </p>
+      </div>
+    </section>
+    <!-- ════════════════════════════════════════════════ END HERO ══════ -->
+
+
+    <!-- ════════════════════════════════ CONTACT CONTENT ════════════════ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-16 items-start">
+
+          <!-- ── Left Column: Contact Info (40% = 2 of 5 cols) ─────────── -->
+          <div class="md:col-span-2">
+
+            <p class="text-amber font-semibold text-sm uppercase tracking-widest mb-3">Get in Touch</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-8 leading-tight">
+              We're Here to Help
+            </h2>
+
+            <!-- Phone -->
+            <div class="mb-6">
+              <p class="text-slate text-sm uppercase tracking-wider font-semibold mb-1">Phone</p>
+              <a
+                href="tel:+17035550192"
+                class="text-navy font-serif text-3xl font-bold hover:text-amber transition-colors"
+              >(703) 555-0192</a>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-6">
+              <p class="text-slate text-sm uppercase tracking-wider font-semibold mb-1">Email</p>
+              <a
+                href="mailto:info@omegaconstruction.com"
+                class="text-amber font-semibold text-lg hover:underline"
+              >info@omegaconstruction.com</a>
+            </div>
+
+            <!-- Office Hours -->
+            <div class="mb-6">
+              <p class="text-slate text-sm uppercase tracking-wider font-semibold mb-1">Office Hours</p>
+              <p class="text-navy font-medium">Monday – Friday</p>
+              <p class="text-slate">7:00 am – 5:00 pm</p>
+            </div>
+
+            <!-- Service Area -->
+            <div class="mb-8">
+              <p class="text-slate text-sm uppercase tracking-wider font-semibold mb-1">Service Area</p>
+              <p class="text-slate leading-relaxed text-sm">
+                Northern Virginia including Fairfax, Arlington, Loudoun, Prince William, and Alexandria — and surrounding areas throughout the Commonwealth of Virginia.
+              </p>
+            </div>
+
+            <!-- Static Placeholder Map -->
+            <div class="rounded-lg overflow-hidden shadow-md">
+              <img
+                src="https://placehold.co/600x400/F7F4EF/1A2E4A?text=Northern+Virginia+Service+Area"
+                alt="Omega Construction service area map — Northern Virginia"
+                class="w-full object-cover"
+              />
+            </div>
+
+          </div>
+          <!-- ── End Left Column ─────────────────────────────────────── -->
+
+
+          <!-- ── Right Column: Inquiry Form (60% = 3 of 5 cols) ────────── -->
+          <div class="md:col-span-3">
+
+            <p class="text-amber font-semibold text-sm uppercase tracking-widest mb-3">Start a Conversation</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-8 leading-tight">
+              Send Us an Inquiry
+            </h2>
+
+            <!-- Inquiry Form -->
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              class="space-y-6"
+            >
+              <!-- NOTE: Replace YOUR_FORM_ID with your real Formspree endpoint ID -->
+
+              <!-- Full Name -->
+              <div>
+                <label for="field-name" class="block text-navy font-semibold text-sm mb-1.5">
+                  Full Name <span class="text-red-500" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="field-name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Jane Smith"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-navy placeholder-slate/50 focus:outline-none focus:ring-2 focus:ring-amber focus:border-amber transition-colors"
+                />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="field-email" class="block text-navy font-semibold text-sm mb-1.5">
+                  Email Address <span class="text-red-500" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="field-email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="jane@example.com"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-navy placeholder-slate/50 focus:outline-none focus:ring-2 focus:ring-amber focus:border-amber transition-colors"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label for="field-phone" class="block text-navy font-semibold text-sm mb-1.5">
+                  Phone Number <span class="text-slate/60 font-normal text-xs ml-1">(optional)</span>
+                </label>
+                <input
+                  type="tel"
+                  id="field-phone"
+                  name="phone"
+                  autocomplete="tel"
+                  placeholder="(703) 555-0000"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-navy placeholder-slate/50 focus:outline-none focus:ring-2 focus:ring-amber focus:border-amber transition-colors"
+                />
+              </div>
+
+              <!-- Project Type Dropdown -->
+              <div>
+                <label for="field-project-type" class="block text-navy font-semibold text-sm mb-1.5">
+                  Project Type
+                </label>
+                <select
+                  id="field-project-type"
+                  name="project_type"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-navy bg-white focus:outline-none focus:ring-2 focus:ring-amber focus:border-amber transition-colors appearance-none"
+                >
+                  <option value="" disabled selected>Select a project type…</option>
+                  <option value="residential">Residential</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="not-sure">Not Sure</option>
+                </select>
+              </div>
+
+              <!-- Project Description -->
+              <div>
+                <label for="field-description" class="block text-navy font-semibold text-sm mb-1.5">
+                  Project Description <span class="text-red-500" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="field-description"
+                  name="description"
+                  required
+                  rows="5"
+                  placeholder="Tell us about your project — what you're looking to build or renovate, approximate size, timeline, and any other details that would help us understand your needs."
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-navy placeholder-slate/50 focus:outline-none focus:ring-2 focus:ring-amber focus:border-amber transition-colors resize-y"
+                ></textarea>
+              </div>
+
+              <!-- Preferred Contact Method -->
+              <fieldset>
+                <legend class="block text-navy font-semibold text-sm mb-2">Preferred Contact Method</legend>
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="preferred_contact"
+                      value="phone"
+                      class="accent-amber w-4 h-4"
+                    />
+                    <span class="text-navy text-sm">Phone</span>
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="preferred_contact"
+                      value="email"
+                      checked
+                      class="accent-amber w-4 h-4"
+                    />
+                    <span class="text-navy text-sm">Email</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Submit Button -->
+              <div>
+                <button
+                  type="submit"
+                  class="w-full sm:w-auto bg-amber hover:bg-amber/90 text-white font-semibold uppercase tracking-wider text-sm px-10 py-4 rounded transition-colors"
+                >
+                  Send My Inquiry
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+          <!-- ── End Right Column ────────────────────────────────────── -->
+
+        </div>
+      </div>
+    </section>
+    <!-- ══════════════════════════════ END CONTACT CONTENT ══════════════ -->
+
+
+    <!-- ═══════════════════════════════════ CTA BANNER ═══════════════════ -->
+    <section class="bg-navy py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-amber mb-6 leading-tight">
+          Ready to Start Your Project?
+        </h2>
+        <p class="text-white/80 text-lg leading-relaxed mb-10">
+          Whether you're planning a custom home, a commercial build, or a full renovation, our team is ready to bring your vision to life. Reach out today for a no-obligation consultation.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="tel:+17035550192"
+            class="bg-amber hover:bg-amber/90 text-white font-semibold uppercase tracking-wider text-sm px-8 py-3.5 rounded transition-colors w-full sm:w-auto"
+          >Call (703) 555-0192</a>
+          <a
+            href="mailto:info@omegaconstruction.com"
+            class="border-2 border-white text-white hover:bg-white hover:text-navy font-semibold uppercase tracking-wider text-sm px-8 py-3.5 rounded transition-colors w-full sm:w-auto"
+          >Email Us Directly</a>
+        </div>
+      </div>
+    </section>
+    <!-- ════════════════════════════════════ END CTA BANNER ══════════════ -->
+
+  </main>
+  <!-- ══════════════════════════════════════════════════════════════════ -->
+
+
+  <!-- ════════════════════════════════════════════════════ FOOTER ═════ -->
+  <footer class="bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+      <!-- 3-column grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Column 1 — Logo & Tagline -->
+        <div>
+          <a href="./index.html" class="flex items-center gap-2 font-serif font-bold text-xl tracking-wide mb-3">
+            <span class="text-amber text-2xl leading-none">Ω</span>
+            <span>OMEGA CONSTRUCTION</span>
+          </a>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Virginia's trusted general contractor for residential and commercial projects — built right, every time.
+          </p>
+        </div>
+
+        <!-- Column 2 — Quick Links -->
+        <div>
+          <h3 class="text-amber font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./index.html"    class="text-white/70 hover:text-amber transition-colors">Home</a></li>
+            <li><a href="./about.html"    class="text-white/70 hover:text-amber transition-colors">About Us</a></li>
+            <li><a href="./services.html" class="text-white/70 hover:text-amber transition-colors">Services</a></li>
+            <li><a href="./projects.html" class="text-white/70 hover:text-amber transition-colors">Projects</a></li>
+            <li><a href="./contact.html"  class="text-white/70 hover:text-amber transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 — Contact Details -->
+        <div>
+          <h3 class="text-amber font-semibold text-sm uppercase tracking-wider mb-4">Contact Us</h3>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>
+              <a href="tel:+17035550192" class="hover:text-amber transition-colors">(703) 555-0192</a>
+            </li>
+            <li>
+              <a href="mailto:info@omegaconstruction.com" class="hover:text-amber transition-colors">info@omegaconstruction.com</a>
+            </li>
+            <li class="pt-1">Mon – Fri &nbsp;7 am – 5 pm</li>
+            <li>Serving Northern Virginia &amp; surrounding areas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-12 border-t border-white/10 pt-6 text-center text-white/40 text-xs">
+        &copy; 2025 Omega Construction LLC. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+  <!-- ══════════════════════════════════════════════════ END FOOTER ══ -->
+
+  <!-- Main JS -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
