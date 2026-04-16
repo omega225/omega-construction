@@ -188,3 +188,21 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - Hover overlay pattern: absolute inset-0 with opacity-0 group-hover:opacity-100 transition-opacity on the overlay div; parent must have `group` class and relative/overflow-hidden wrapper
   - Browser testing not available — manual verification needed
 ---
+
+## 2026-04-16 - US-010
+- What was implemented: Projects page — lightbox
+  - Added lightbox HTML div (id="lightbox") to projects.html before the main.js script tag
+  - Lightbox: fixed inset-0, z-50, flex centering, bg-black/80 backdrop; starts hidden
+  - Lightbox panel: bg-white rounded-lg, max-w-3xl, max-h-[90vh] with overflow-y-auto for tall content
+  - Close button id="lb-close": positioned absolute top-right, navy bg, SVG X icon
+  - Large image id="lb-image": w-full object-cover rounded-t-lg, max-h-[50vh] for mobile safety
+  - Project details: id="lb-name" (serif heading), id="lb-location", id="lb-scope", id="lb-year" in dl/dt/dd grid
+  - All lightbox JS logic was pre-built in main.js (US-001): opens on data-lightbox-trigger click, reads data-name/location/scope/year from parent [data-type] card, closes on X button / outside click / Escape key, locks body scroll
+- Files changed: projects.html, ralph/tracks/prd.json, ralph/tracks/progress.txt
+- **Learnings for future iterations:**
+  - main.js lightbox was pre-built — only HTML with correct IDs was needed (id="lightbox", lb-image, lb-name, lb-location, lb-scope, lb-year, lb-close)
+  - Clicking lightbox backdrop (id="lightbox" element itself) closes — JS checks `e.target === lightbox`, so the panel div must be a child of the lightbox div, not the lightbox itself
+  - max-h-[50vh] on lightbox image prevents very tall images from overwhelming the panel on short screens; overflow-y-auto on panel handles overflow
+  - `dl/dt/dd` semantic grid pattern works well for labeled metadata (location, scope, year)
+  - Browser testing not available — manual verification needed
+---
