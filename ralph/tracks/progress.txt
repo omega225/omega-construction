@@ -150,3 +150,21 @@ Started: Thu, Apr 16, 2026 12:20:46 AM
   - Service overline pattern: amber "Service 01" label above h2 provides visual hierarchy without needing a separate section intro
   - Browser testing not available — manual verification needed
 ---
+
+## 2026-04-16 - US-008
+- What was implemented: Services page — FAQ accordion
+  - Added FAQ section to services.html between the process timeline and CTA Banner
+  - Section heading: 'Common Questions' with amber overline 'Got Questions?'
+  - 6 accordion items covering: licensing, service area, timeline estimates, payment terms, subcontractors, permits
+  - Each item: `data-accordion-item` wrapper, `data-accordion-trigger` button with amber chevron (`data-accordion-chevron`), hidden `data-accordion-panel`
+  - Chevron rotates 180° via CSS `transition-transform duration-300` + `rotate-180` class toggled by main.js
+  - Accordion logic was already in main.js from US-001 — no JS changes needed
+  - CTA Banner already existed after the process timeline and remains at bottom after FAQ
+  - FAQ uses bg-cream section on max-w-3xl centered container; accordion items are bg-white cards
+- Files changed: services.html, ralph/tracks/prd.json, ralph/tracks/progress.txt
+- **Learnings for future iterations:**
+  - main.js accordion logic was pre-built — just need HTML with data-accordion-item/trigger/panel/chevron attributes
+  - Accordion items use `bg-white rounded-lg shadow-sm` on bg-cream background for visual card contrast
+  - `transition-transform duration-300` on chevron SVG + JS `rotate-180` class toggle gives smooth rotation without custom CSS
+  - Browser testing not available — manual verification needed
+---
