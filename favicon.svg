@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#1a2e4a"/>
+  <!-- Hard hat brim -->
+  <rect x="5" y="21" width="22" height="3" rx="1.5" fill="#f07c1e"/>
+  <!-- Hard hat dome -->
+  <path d="M8 21 Q8 10 16 10 Q24 10 24 21 Z" fill="#f07c1e"/>
+  <!-- Hard hat highlight -->
+  <path d="M11 21 Q11 13 16 13 Q21 13 21 21 Z" fill="#f5954a" opacity="0.5"/>
+  <!-- Center rib -->
+  <rect x="15" y="10" width="2" height="11" rx="1" fill="#e06010" opacity="0.6"/>
+</svg>
